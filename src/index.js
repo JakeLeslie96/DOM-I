@@ -54,8 +54,6 @@ footerLink.textContent = siteContent.footer.copyright
 footerLink.classList.add('bold')
 
 
-
-
 // CONTACT
 
 const contact = document.querySelector('section.contact')
@@ -89,8 +87,8 @@ document.querySelector('.cta h1').textContent = siteContent.cta.h1
 document.querySelector('.cta button').textContent = siteContent.cta.button
 
 // NAV LINKS
-const navLinks = document.querySelector('header nav a')
-const navLinkText = Object.values(siteContent.nav)
-navLinks.forEach((link,idx) => {
-  link.textContent = navLinkText[idx]
+const navLinks = document.querySelectorAll('header nav a')
+const navLinkTexts = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) => {
+  link.textContent = navLinkTexts[idx]
 })
